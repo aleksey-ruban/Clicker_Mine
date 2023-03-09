@@ -4,15 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:divider="?android:dividerVertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            android:textAlignment="center"
+            android:text="@string/_250"
+            android:textSize="28sp"
+            />
+
+        <include layout="@layout/transporter"
+            android:id="@+id/transporter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0sp"
+            android:layout_marginRight="0sp"
+            />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:divider="?android:dividerHorizontal"
+                android:showDividers="middle">
+
+                <include
+                    layout="@layout/elevator"
+                    android:id="@+id/elevator"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0sp"
+                    android:layout_marginRight="0sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:divider="?android:dividerVertical"
+                    android:showDividers="middle">
+
+                    <include
+                        layout="@layout/mine_view"
+                        android:id="@+id/mine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="2sp"
+                        />
+
+                    <include
+                        layout="@layout/mine_view"
+                        android:id="@+id/mine2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="2sp"
+                        />
+
+                    <include
+                        layout="@layout/mine_view"
+                        android:id="@+id/mine3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="2sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

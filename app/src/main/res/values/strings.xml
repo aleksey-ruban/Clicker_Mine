@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Clicker_Mine</string>
+    <string name="click">Click</string>
+    <string name="mine">Mine №</string>
+    <string name="_10_p_s">10 p/cl</string>
+    <string name="level_1">Level 1</string>
+    <string name="elevator">Elevator</string>
+    <string name="_250">250$</string>
+    <string name="_0_position">0 position</string>
+    <string name="invest">Invest</string>
 </resources>
